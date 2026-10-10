@@ -1,0 +1,240 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#imagen_nav{
+    width: 60px;
+    padding-bottom: 10px;
+    padding-left: 10px
+}
+h1 {
+    margin: 0;
+}
+
+.fix {
+    color: blue;
+    font-weight: bold;
+}
+
+.neo {
+    color: #12345a;
+    font-weight: bold;
+}
+
+#tex_ti{
+    line-height:0.1;
+    padding-top: 20px;
+    padding-left: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+#papa_nav{
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    
+}
+#titulo{
+    width: 60px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px
+}
+#cel{
+    padding-bottom: 3px;
+}
+#unuarios_lupa{
+    display: flex;
+    flex-direction: row; 
+    padding-left: 20px;
+}
+#navegacion{
+    width: 700px;
+    height: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top:45px;
+    padding-left:30px;
+}
+.inicio_nav{
+    color:RGB(29, 45, 89);
+    font-weight: bold;
+    text-decoration: none;
+    margin: 5px;
+
+    
+
+}
+.inicio_nav:hover{
+    color: blue;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-thickness: 2px;
+}
+
+#usu{
+    padding-top: 30px;
+}
+#usu:hover{
+    color: blue;
+}
+#car{
+    padding-top: 30px;
+}
+#car:hover{
+    color: blue;
+}
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+#gama{
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    line-height:0.1;
+    color: #12345a;
+    font-weight: bold;
+    margin-top: 10px;
+}
+#mayor{
+    width: 80%;
+    height: 100vh;
+
+    margin: auto;
+    
+}
+#primeros-3{
+    width: 100%;
+    height: 50vh;
+
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+#segundos-3{
+    width: 100%;
+    height: 50vh;
+
+    display: flex;
+    flex-direction: row;
+}
+.cuados_1{
+    width: 33%;
+
+    margin: 5px;
+}
+.cuados_1:hover{
+    width: 35%;
+    
+}
+.imagen_cua{
+    height: 55%;
+}
+.tex_cua{
+    height: 40%;
+
+}
+.cuadros_2{
+    width: 33%;
+    margin: 5px;
+}
+.cuadros_2:hover{
+    width: 35%;
+}
+.imagenes_ta{
+    width: 100%;
+    height: 200px;
+}
+.tex_cua{
+    text-align: center;
+    color: #12345a;
+    font-weight: bold;
+    padding-top:15px;
+}
+#papa_sevicios{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+}
+#textos_sevicios{
+    width: 60%;
+    height: 550px;
+    
+}
+#servi_nuestro{
+    width: 100%;
+    height: 100px;
+    padding-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    line-height:0.10;
+    color: #12345a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+
+}
+#nue{
+    font-weight: bold;
+}
+
+
+#logitos{
+    width: 100%;
+    height: 450px;
+    display: flex;
+}
+.lo_servi{
+    width: 25%;
+    height: 400px;
+    padding-left: 10px
+
+}
+.ico{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 300px
+}
+.ico:hover{
+    height: 180px;
+}
+.tex_ico{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.boton_ser{
+    text-decoration: none;
+    color:#12345a;
+    font-weight: bold;
+}
+.boton_ser:hover{
+    color: blue;
+}
+
+#inagen_servicio{
+    width: 40%;
+    height: 550px;
+}
+#imagen_manos{
+    width: 100%;
+    height: 400px;
+    padding-right: 10px;
+}
