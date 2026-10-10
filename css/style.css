@@ -74,6 +74,23 @@ body {
     color: var(--primary-blue);
 }
 
+.search-form {
+    position: relative;
+}
+
+.search-status {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    z-index: 10;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: #fff;
+    color: #b02a37;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
 /* --- CAROUSEL --- */
 .carousel-item img {
     height: 450px;
@@ -85,6 +102,12 @@ body {
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     border-radius: 10px;
     overflow: hidden;
+    scroll-margin-top: 100px;
+}
+
+.product-card.search-result-found {
+    outline: 3px solid var(--primary-blue);
+    outline-offset: 3px;
 }
 
 .product-card:hover {
@@ -181,16 +204,179 @@ body {
 }
 
 /* --- FOOTER --- */
-footer {
-    background-color: #0b1d32 !important;
+.site-footer {
+    padding: 3.5rem 0 1.25rem;
+    border-top: 4px solid transparent;
+    border-image: linear-gradient(90deg, #0d6efd 0%, #08c9d8 58%, #f4bd50 100%) 1;
+    background: #091a2e;
+    color: #f5f8fc;
 }
 
-.social-icon {
+.footer-main {
+    padding-bottom: 2.75rem;
+}
+
+.footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-brand-icon {
+    display: grid;
+    width: 46px;
+    aspect-ratio: 1;
+    place-items: center;
+    border-radius: 8px;
+    background: #12345a;
+    color: #28c6d7;
+    font-size: 1.35rem;
+}
+
+.footer-wordmark,
+.footer-tagline {
+    display: block;
+}
+
+.footer-wordmark {
+    font-size: 1.35rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.footer-wordmark span {
+    color: #42b9ff;
+}
+
+.footer-tagline {
+    margin-top: 0.25rem;
+    color: #aab8c9;
+    font-size: 0.7rem;
+}
+
+.footer-description {
+    max-width: 310px;
+    margin: 1rem 0 0;
+    color: #b8c4d1;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.footer-heading {
+    margin: 0 0 1rem;
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.footer-nav {
+    display: grid;
+    gap: 0.65rem;
+}
+
+.footer-nav a,
+.footer-phone {
+    width: fit-content;
+    color: #b8c4d1;
+    font-size: 0.9rem;
+    text-decoration: none;
     transition: color var(--transition-speed);
 }
 
-.social-icon:hover {
-    color: var(--primary-blue) !important;
+.footer-nav a:hover,
+.footer-phone:hover,
+.footer-bottom a:hover {
+    color: #42d2dc;
+}
+
+.footer-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    margin: 0 0 0.8rem;
+    color: #b8c4d1;
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+.footer-detail i,
+.footer-phone i {
+    width: 1rem;
+    margin-top: 0.2rem;
+    color: #42b9ff;
+    text-align: center;
+}
+
+.footer-phone {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+}
+
+.footer-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    min-height: 42px;
+    padding: 0.6rem 0.85rem;
+    border: 1px solid #39b887;
+    border-radius: 4px;
+    background: #087c57;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color var(--transition-speed), border-color var(--transition-speed);
+}
+
+.footer-whatsapp:hover {
+    border-color: #54d49c;
+    background: #096b4d;
+    color: #fff;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    color: #9eacbd;
+    font-size: 0.8rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: #c6d1dc;
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+@media (max-width: 575.98px) {
+    .site-footer {
+        padding-top: 2.5rem;
+    }
+
+    .footer-main {
+        padding-bottom: 2rem;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
 }
 
 /* --- RESPONSIVE DESIGN MEJORADO --- */
