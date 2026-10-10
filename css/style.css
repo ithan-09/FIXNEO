@@ -122,7 +122,6 @@ h1 {
 #segundos-3{
     width: 100%;
     height: 50vh;
-
     display: flex;
     flex-direction: row;
 }
@@ -161,7 +160,7 @@ h1 {
 }
 #papa_sevicios{
     width: 100%;
-    height: 600px;
+    height: 480px;
     display: flex;
     flex-direction: row;
 }
@@ -194,23 +193,32 @@ h1 {
     height: 450px;
     display: flex;
 }
-.lo_servi{
-    width: 25%;
-    height: 400px;
-    padding-left: 10px
 
+.lo_servi{
+
+    width: 25%;
+    height: 300px;
+    padding-left: 10px;
+    border: 1px solid white;
+    
+}
+.lo_servi:hover{
+    width: 30%;
+    height: 320px;
+    border: 2px solid blue;
 }
 .ico{
     width: 100%;
-    height: 150px;
+    height: 110px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 300px
+ 
 }
-.ico:hover{
-    height: 180px;
+#icoo_1,#icoo_2,#icoo_3,#icoo_4{
+    color: #12345a;
 }
+
 .tex_ico{
     width: 100%;
     height: 200px;
@@ -219,6 +227,7 @@ h1 {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-bottom: 50px;
 }
 .boton_ser{
     text-decoration: none;
@@ -231,10 +240,190 @@ h1 {
 
 #inagen_servicio{
     width: 40%;
-    height: 550px;
+    height: 400px;
 }
 #imagen_manos{
     width: 100%;
     height: 400px;
     padding-right: 10px;
+}
+#calidad{
+    width: 100%;
+    height: 500px;
+
+   
+}
+#papa_calidad{
+    width: 80%;
+    height: 400px;
+    margin: auto;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#tex_calidad{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.sub_titulos{
+    font-weight: bold;
+    color: #12345a;
+}
+.promesas{
+    width: 30%;
+    height: 300px;
+    
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid white;
+}
+#escudo,#ojo,#carro,.cal{
+    color: #12345a;
+}
+.fix_neo{
+    color: blue;
+}
+.promesas:hover{
+    width: 35%;
+    height: 350px;
+    border: 2px solid blue;
+}
+#laboratorio{
+    width: 100%;
+    height: 600px;
+
+
+}
+#papa_labo{
+    width: 80%;
+    height: 350px;
+    
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+#tex_labo{
+  
+    width: 40%;
+    height: 550px;
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+}
+#mapa{
+    width: 60%;
+    height: 550px;
+    margin: 10px;
+    border: 2px solid blue;
+    
+}
+.casitas{
+    width: 100%;
+    height: 100px;
+   padding-left: 10px; 
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    
+}
+.iconos_cantral{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: RGB(170, 186, 242,9);
+    border-radius: 20px;
+    color: #12345a;
+
+}
+.tex_central{
+    width: 100%;
+    height: 100px;
+ 
+    line-height:0.8;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-left: 15px;
+    
+}
+.sub_labo{
+    font-weight: bold;
+    line-height:0.8;
+    color: #12345a;
+}
+.tex1-laboo{
+    color: #12345a;
+   font-weight: bold; 
+}
+.text-laboo{
+    color: blue;
+    font-weight: bold;
+}
+footer{
+    width: 100%;
+    height: 150px;
+}
+.footer-brand{
+    display: flex;
+    
+}
+.logo_footer{
+    width: 250px;
+    height: 150px;
+    display: flex;
+}
+#fix_fu{
+    color: #12345a;
+    text-decoration: none;
+
+
+}
+#neo_fu{
+    color: blue;
+    text-decoration: none;
+}
+.footer-text{
+    text-decoration: none;
+    padding-top: 40px;
+    font-size: 40px;
+    font-weight: bold; 
+        
+}
+#tex-footer{
+    color: #12345a;
+    margin: 10px;
+    padding-top: 40px;
+    font-weight: bold; 
+}
+.social-icon,#micro{
+    color:#12345a;
+    margin: 10px;
+}
+.footer-social{
+    margin: 10px;
+    padding-top: 40px;
+    
+}
+.footer-brand{
+    width: 80%;
+    margin: auto;
+    
+}
+#chip{
+    padding-top: 40px; 
 }
