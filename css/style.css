@@ -1,809 +1,207 @@
-body{
+/* ==========================================
+   FIXNEO - Estilos Principales UX/UI
+   ========================================== */
+
+:root {
+    --primary-blue: #0d6efd;
+    --dark-navy: #12345a;
+    --light-bg: #f8f9fa;
+    --transition-speed: 0.3s ease;
+}
+
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    color: #333;
 }
-#imagen_nav{
-    width: 60px;
-    padding-bottom: 10px;
-    padding-left: 10px
+
+/* --- HEADER & NAVIGATION --- */
+.brand-logo-img {
+    width: 50px;
+    height: auto;
 }
-h1 {
+
+.brand-title-group h1 {
     margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.1;
 }
 
 .fix {
-    color: blue;
+    color: var(--primary-blue);
     font-weight: bold;
 }
 
 .neo {
-    color: #12345a;
+    color: var(--dark-navy);
     font-weight: bold;
 }
 
-#tex_ti{
-    line-height:0.1;
-    padding-top: 20px;
-    padding-left: 10px;
-    font-size: 13px;
+.brand-subtitle {
+    margin: 0;
+    font-size: 0.75rem;
+    color: var(--dark-navy);
     font-weight: bold;
 }
-#papa_nav{
-    width: 100%;
-    height: 100px;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    
-}
-#titulo{
-    width: 60px;
-    height: 80px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 10px
-}
-#cel{
-    padding-bottom: 3px;
-}
-#unuarios_lupa{
-    display: flex;
-    flex-direction: row; 
-    padding-left: 20px;
-}
-#navegacion{
-    width: 700px;
-    height: 80px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top:45px;
-    padding-left:30px;
-}
-.inicio_nav{
-    color:RGB(29, 45, 89);
+
+.inicio_nav {
+    color: var(--dark-navy);
     font-weight: bold;
     text-decoration: none;
-    margin: 5px;
-
-    
-
+    font-size: 0.9rem;
+    transition: color var(--transition-speed);
 }
-.inicio_nav:hover{
-    color: blue;
-    font-weight: bold;
+
+.inicio_nav:hover {
+    color: var(--primary-blue);
     text-decoration: underline;
-    text-underline-offset: 20px;
+    text-underline-offset: 8px;
     text-decoration-thickness: 2px;
 }
 
-#usu{
-    padding-top: 30px;
+.btn-icon {
+    background: none;
+    border: none;
+    color: var(--dark-navy);
+    cursor: pointer;
+    transition: color var(--transition-speed);
 }
-#usu:hover{
-    color: blue;
+
+.btn-icon:hover {
+    color: var(--primary-blue);
 }
-#car{
-    padding-top: 30px;
-}
-#car:hover{
-    color: blue;
-}
+
+/* --- CAROUSEL --- */
 .carousel-item img {
-    height: 500px;
+    height: 450px;
     object-fit: cover;
 }
 
-#gama{
-    width: 100%;
-    height: 80px;
-    text-align: center;
-    line-height:0.1;
-    color: #12345a;
-    font-weight: bold;
-    margin-top: 10px;
-}
-#mayor{
-    width: 80%;
-    height: 100vh;
-
-    margin: auto;
-    
-}
-#primeros-3{
-    width: 100%;
-    height: 50vh;
-
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 5px;
-}
-#segundos-3{
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    flex-direction: row;
-}
-.cuados_1{
-    width: 33%;
-
-    margin: 5px;
-}
-.cuados_1:hover{
-    width: 35%;
-    
-}
-.imagen_cua{
-    height: 55%;
-}
-.tex_cua{
-    height: 40%;
-
-}
-.cuadros_2{
-    width: 33%;
-    margin: 5px;
-}
-.cuadros_2:hover{
-    width: 35%;
-}
-.imagenes_ta{
-    width: 100%;
-    height: 200px;
-}
-.tex_cua{
-    text-align: center;
-    color: #12345a;
-    font-weight: bold;
-    padding-top:15px;
-}
-#papa_sevicios{
-    width: 100%;
-    height: 480px;
-    display: flex;
-    flex-direction: row;
-}
-#textos_sevicios{
-    width: 60%;
-    height: 550px;
-    
-}
-#servi_nuestro{
-    width: 100%;
-    height: 100px;
-    padding-left: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    line-height:0.10;
-    color: #12345a;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-
-}
-#nue{
-    font-weight: bold;
-}
-
-
-#logitos{
-    width: 100%;
-    height: 450px;
-    display: flex;
-}
-
-.lo_servi{
-
-    width: 25%;
-    height: 300px;
-    padding-left: 10px;
-    border: 1px solid white;
-    
-}
-.lo_servi:hover{
-    width: 30%;
-    height: 320px;
-    border: 2px solid blue;
-}
-.ico{
-    width: 100%;
-    height: 110px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- 
-}
-#icoo_1,#icoo_2,#icoo_3,#icoo_4{
-    color: #12345a;
-}
-
-.tex_ico{
-    width: 100%;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 50px;
-}
-.boton_ser{
-    text-decoration: none;
-    color:#12345a;
-    font-weight: bold;
-}
-.boton_ser:hover{
-    color: blue;
-}
-
-#inagen_servicio{
-    width: 40%;
-    height: 400px;
-}
-#imagen_manos{
-    width: 100%;
-    height: 400px;
-    padding-right: 10px;
-}
-#calidad{
-    width: 100%;
-    height: 500px;
-
-   
-}
-#papa_calidad{
-    width: 80%;
-    height: 400px;
-    margin: auto;
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-#tex_calidad{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-.sub_titulos{
-    font-weight: bold;
-    color: #12345a;
-}
-.promesas{
-    width: 30%;
-    height: 300px;
-    
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* --- PRODUCT CARDS (GAMA) --- */
+.product-card {
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     border-radius: 10px;
-    text-align: center;
-    border: 1px solid white;
-}
-#escudo,#ojo,#carro,.cal{
-    color: #12345a;
-}
-.fix_neo{
-    color: blue;
-}
-.promesas:hover{
-    width: 35%;
-    height: 350px;
-    border: 2px solid blue;
-}
-#laboratorio{
-    width: 100%;
-    height: 600px;
-
-
-}
-#papa_labo{
-    width: 80%;
-    height: 350px;
-    
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-}
-#tex_labo{
-  
-    width: 40%;
-    height: 550px;
-    border: 2px solid blue;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-
-}
-#mapa{
-    width: 60%;
-    height: 550px;
-    margin: 10px;
-    border: 2px solid blue;
-    
-}
-.casitas{
-    width: 100%;
-    height: 100px;
-   padding-left: 10px; 
-    margin: 5px;
-    display: flex;
-    flex-direction: row;
-    
-}
-.iconos_cantral{
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: RGB(170, 186, 242,9);
-    border-radius: 20px;
-    color: #12345a;
-
-}
-.tex_central{
-    width: 100%;
-    height: 100px;
- 
-    line-height:0.8;
-    display: flex;
-    flex-direction: column;
-    padding-top: 20px;
-    padding-left: 15px;
-    
-}
-.sub_labo{
-    font-weight: bold;
-    line-height:0.8;
-    color: #12345a;
-}
-.tex1-laboo{
-    color: #12345a;
-   font-weight: bold; 
-}
-.text-laboo{
-    color: blue;
-    font-weight: bold;
-}
-footer{
-    width: 100%;
-    height: 150px;
-}
-.footer-brand{
-    display: flex;
-    
-}
-.logo_footer{
-    width: 250px;
-    height: 150px;
-    display: flex;
-}
-#fix_fu{
-    color: #12345a;
-    text-decoration: none;
-
-
-}
-#neo_fu{
-    color: blue;
-    text-decoration: none;
-}
-.footer-text{
-    text-decoration: none;
-    padding-top: 40px;
-    font-size: 40px;
-    font-weight: bold; 
-        
-}
-#tex-footer{
-    color: #12345a;
-    margin: 10px;
-    padding-top: 40px;
-    font-weight: bold; 
-}
-.social-icon,#micro{
-    color:#12345a;
-    margin: 10px;
-}
-.footer-social{
-    margin: 10px;
-    padding-top: 40px;
-    
-}
-.footer-brand{
-    width: 80%;
-    margin: auto;
-    
-}
-#chip{
-    padding-top: 40px; 
-}
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    overflow-x: hidden;
-}
-
-img,
-iframe {
-    max-width: 100%;
-}
-
-#papa_nav {
-    min-height: 100px;
-    height: auto;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 8px 16px;
-}
-
-#navegacion {
-    width: auto;
-    height: auto;
-    flex: 1 1 420px;
-    padding: 12px 16px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-#unuarios_lupa {
-    align-items: center;
-    padding-left: 0;
-    gap: 10px;
-}
-
-#usu,
-#car {
-    padding-top: 0;
-}
-
-#mayor {
-    width: min(1100px, 92%);
-    height: auto;
-}
-
-#primeros-3,
-#segundos-3 {
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
-    margin-bottom: 16px;
-}
-
-.cuados_1,
-.cuadros_2 {
-    width: auto;
-    min-width: 0;
-    margin: 0;
-    border-radius: 8px;
     overflow: hidden;
 }
 
-.cuados_1:hover,
-.cuadros_2:hover,
-.promesas:hover,
-.lo_servi:hover {
-    width: auto;
-    height: auto;
-    transform: translateY(-3px);
-}
-
-.imagen_cua {
-    height: auto;
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
 }
 
 .imagenes_ta {
-    display: block;
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-.tex_cua {
-    height: auto;
-    padding: 16px 8px;
-}
-
-#papa_sevicios {
-    height: auto;
-    align-items: center;
-}
-
-#textos_sevicios {
-    height: auto;
-}
-
-#logitos {
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-    padding: 12px;
-}
-
+/* --- SERVICIOS --- */
 .lo_servi {
-    width: auto;
-    height: auto;
-    min-height: 190px;
-    padding: 12px;
-    border: 1px solid #e4e9f2;
-    border-radius: 8px;
+    transition: transform var(--transition-speed), border-color var(--transition-speed);
+    border-radius: 10px;
 }
 
-.tex_ico {
-    height: auto;
-    min-height: 80px;
-    padding: 0;
+.lo_servi:hover {
+    transform: translateY(-4px);
+    border: 1px solid var(--primary-blue) !important;
 }
 
-#inagen_servicio,
+.boton_ser {
+    text-decoration: none;
+    color: var(--dark-navy);
+    transition: color var(--transition-speed);
+}
+
+.boton_ser:hover {
+    color: var(--primary-blue);
+}
+
 #imagen_manos {
-    height: auto;
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
 }
 
-#calidad,
-#laboratorio,
-footer {
-    height: auto;
-}
-
-#papa_calidad {
-    width: min(1100px, 92%);
-    height: auto;
-    gap: 16px;
-}
-
+/* --- PROMESAS / CALIDAD --- */
 .promesas {
-    width: auto;
-    min-height: 300px;
-    height: auto;
-    margin: 0;
-    padding: 20px;
-    border: 1px solid #e4e9f2;
-    border-radius: 8px;
+    transition: transform var(--transition-speed);
+    border-radius: 10px;
 }
 
-#papa_labo {
-    width: min(1100px, 92%);
-    height: auto;
-    align-items: stretch;
+.promesas:hover {
+    transform: translateY(-4px);
 }
 
-#tex_labo,
-#mapa {
-    height: auto;
-    min-width: 0;
+.cal {
+    color: var(--dark-navy);
 }
 
+.fix_neo {
+    color: var(--primary-blue);
+}
+
+/* --- LABORATORIO --- */
 #tex_labo {
-    padding: 20px 12px;
+    border-radius: 12px;
 }
 
-#mapa iframe {
-    display: block;
-    min-height: 550px;
-}
-
-.footer-brand {
+.casitas {
+    display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 16px 0;
 }
 
-.footer-text,
-#tex-footer,
-.footer-social {
-    padding-top: 0;
+.iconos_cantral {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(170, 186, 242, 0.3);
+    border-radius: 12px;
+    color: var(--dark-navy);
+    flex-shrink: 0;
 }
 
+.sub_labo {
+    color: var(--dark-navy);
+    font-size: 1.1rem;
+}
+
+.tex1-laboo {
+    color: var(--dark-navy);
+    font-weight: bold; 
+}
+
+.text-laboo {
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #0b1d32 !important;
+}
+
+.social-icon {
+    transition: color var(--transition-speed);
+}
+
+.social-icon:hover {
+    color: var(--primary-blue) !important;
+}
+
+/* --- RESPONSIVE DESIGN MEJORADO --- */
 @media (max-width: 992px) {
-    #papa_nav {
-        justify-content: center;
-    }
-
-    #navegacion {
-        flex-basis: 100%;
-        order: 3;
-        padding: 8px 0;
-    }
-
-    #unuarios_lupa {
-        flex: 1 1 300px;
-        justify-content: center;
-    }
-
-    #papa_sevicios {
-        flex-direction: column;
-    }
-
-    #textos_sevicios,
-    #inagen_servicio {
-        width: 100%;
-    }
-
-    #imagen_manos {
-        width: 100%;
-        max-height: 420px;
-        object-fit: cover;
-    }
-
-    #papa_labo {
-        width: 92%;
-    }
-
-    #tex_labo,
-    #mapa {
-        width: 50%;
-    }
-
-    .footer-brand {
-        width: 92%;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    #tex-footer {
-        flex: 1 1 400px;
+    .carousel-item img {
+        height: 320px;
     }
 }
 
 @media (max-width: 768px) {
-    #gama {
-        height: auto;
-        line-height: 1.3;
-        padding: 20px 12px;
-    }
-
-    #primeros-3,
-    #segundos-3 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    #papa_calidad {
-        flex-wrap: wrap;
-    }
-
-    .promesas {
-        flex: 1 1 220px;
-        min-height: 260px;
-    }
-
-    #papa_labo {
-        flex-direction: column;
-    }
-
-    #tex_labo,
-    #mapa {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    #mapa iframe {
-        min-height: 380px;
-        height: 380px;
-    }
-}
-
-@media (max-width: 576px) {
-    #papa_nav {
-        padding: 8px;
-    }
-
-    #titulo {
-        margin: 4px;
-    }
-
-    #tex_ti {
-        padding-left: 4px;
-    }
-
-    #unuarios_lupa {
-        flex-basis: 100%;
-        flex-wrap: wrap;
-    }
-
-    #unuarios_lupa .navbar,
-    #unuarios_lupa .container-fluid,
-    #unuarios_lupa form {
-        width: 100%;
-    }
-
-    #navegacion {
-        gap: 8px 12px;
-    }
-
-    .inicio_nav {
-        margin: 0;
-        font-size: 0.85rem;
-    }
-
     .carousel-item img {
-        height: 260px;
-    }
-
-    #primeros-3,
-    #segundos-3,
-    #logitos {
-        grid-template-columns: 1fr;
-    }
-
-    .imagenes_ta {
-        height: 220px;
-    }
-
-    #servi_nuestro {
-        height: auto;
-        padding: 20px 12px;
-        line-height: 1.3;
-        text-align: center;
-    }
-
-    #imagen_manos {
-        max-height: 300px;
-    }
-
-    #tex_labo {
-        align-items: stretch;
-    }
-
-    #tex_labo > h2 {
-        text-align: center;
-        font-size: 1.5rem;
-    }
-
-    .casitas {
-        min-height: 100px;
-        height: auto;
-        padding-left: 0;
-    }
-
-    .tex_central {
-        height: auto;
-        min-width: 0;
-        padding-top: 12px;
-        line-height: 1.2;
-        overflow-wrap: anywhere;
-    }
-
-    #tex_labo > div[style] {
-        flex-direction: column;
-        gap: 10px !important;
-    }
-
-    #tex_labo > div[style] .btn {
-        width: 100%;
-    }
-
-    .footer-brand {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .logo_footer {
-        justify-content: center;
-    }
-
-    #tex-footer {
-        margin: 0;
-        padding: 0 12px;
-    }
-
-    .footer-social {
-        margin: 0;
+        height: 240px;
     }
 }

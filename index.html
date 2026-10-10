@@ -1,270 +1,291 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>FIXNEO</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    </head>
-    <body>
-        <nav id="papa_nav">
-            <div id="titulo">
-               <img src="img/logo%20final%20.png" id="imagen_nav">
-            </div>   
-                <div id="tex_ti">
-               <h1><span class="fix">FIX</span><span class="neo">NEO</span></h1>
-                <p id="texxx">tu celular en buenas manos</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIXNEO - Tu celular en buenas manos</title>
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- RemixIcon & FontAwesome -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR HEADER -->
+    <header class="header-nav shadow-sm sticky-top bg-white">
+        <div class="container d-flex align-items-center justify-content-between py-2">
+            <!-- Brand Logo & Title -->
+            <a href="#" class="d-flex align-items-center text-decoration-none gap-2">
+                <img src="img/logo%20final%20.png" alt="Logo FixNeo" class="brand-logo-img">
+                <div class="brand-title-group">
+                    <h1><span class="fix">FIX</span><span class="neo">NEO</span></h1>
+                    <p class="brand-subtitle">tu celular en buenas manos</p>
                 </div>
-        
-            
-            <div id="navegacion">
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-links d-none d-lg-flex gap-4">
                 <a href="#" class="inicio_nav">INICIO</a>
                 <a href="#mayor" class="inicio_nav">PRODUCTOS</a>
                 <a href="#nuestro_servicios" class="inicio_nav">SERVICIOS</a>
-                <a href="#calidad" class="inicio_nav">GARANTIAS</a>
+                <a href="#calidad" class="inicio_nav">GARANTÍAS</a>
                 <a href="#laboratorio" class="inicio_nav">SOPORTE</a>
+            </nav>
+
+            <!-- Actions (Search & User Icons) -->
+            <div class="nav-actions d-flex align-items-center gap-3">
+                <form class="d-none d-md-flex search-form" role="search">
+                    <input class="form-control form-control-sm" type="search" placeholder="Buscar repuesto..." aria-label="Search">
+                    <button class="btn btn-outline-primary btn-sm" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <button class="btn-icon" aria-label="Usuario"><i class="fa-solid fa-user fa-lg" id="usu"></i></button>
+                <button class="btn-icon position-relative" aria-label="Carrito">
+                    <i class="fa-solid fa-cart-shopping fa-lg" id="car"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary" style="font-size: 0.6rem;">0</span>
+                </button>
             </div>
-            
-            <div id="unuarios_lupa">    
-                <i class="fa-solid fa-user fa-2x" id="usu"></i>
-                <nav class="navbar bg-body-tertiary">
-                    <div class="container-fluid">
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                            <button class="btn btn-outline-primary" type="submit">buscar</button>
-                        </form>
-                    </div>
-                </nav>
-                <i class="fa-solid fa-cart-shopping fa-2x" id="car"></i>
-            </div>
-        </nav>
- 
-        <div id="carouselExampleIndicators" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/linpiesa.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/reparacion.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/eskin.jpg" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>     
-            <div id="gama">
-            <h2>-----    NUESTRA GAMA    -----</h2>
-            <P>Lo mejor en repuestos y repuesto para tu celular</P>
         </div>
-            
-        <div id="mayor">
-            <div id="primeros-3">
-                <div class="cuados_1">
-                    <div class="imagen_cua">
-                        <img src="img/trnsparente.jpg" class="imagenes_ta">
+    </header>
+
+    <!-- HERO CAROUSEL -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/linpiesa.jpg" class="d-block w-100" alt="Limpieza profesional">
+            </div>
+            <div class="carousel-item">
+                <img src="img/reparacion.jpg" class="d-block w-100" alt="Reparación de celulares">
+            </div>
+            <div class="carousel-item">
+                <img src="img/eskin.jpg" class="d-block w-100" alt="Protectores y skins">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>     
+
+    <!-- GAMA / PRODUCTOS -->
+    <section id="gama" class="py-5 text-center">
+        <div class="container">
+            <h2 class="fw-bold mb-2">----- NUESTRA GAMA -----</h2>
+            <p class="text-muted">Lo mejor en accesorios y repuestos para tu celular</p>
+        </div>
+    </section>
+        
+    <main id="mayor" class="container mb-5">
+        <div class="row g-4">
+            <!-- Producto 1 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card product-card h-100 shadow-sm border-0">
+                    <img src="img/trnsparente.jpg" class="card-img-top imagenes_ta" alt="Funda transparente">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <p class="fw-bold text-dark">Funda transparente <br><span class="text-primary">S/ 34.99</span></p>
+                        <button type="button" class="btn btn-primary w-100"><i class="fa-solid fa-cart-shopping me-2"></i>Comprar ahora</button>
                     </div>
-                    <div class="tex_cua">
-                        <p>funda transparente <br>s/34.99</p>
-                        <button type="button" class="btn btn-primary"><i class="fa-solid fa-cart-shopping fa-1x"></i>conprar ahora</button>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card product-card h-100 shadow-sm border-0">
+                    <img src="img/vidriof.jpg" class="card-img-top imagenes_ta" alt="Vidrio templado">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <p class="fw-bold text-dark">Vidrio templado <br><span class="text-primary">S/ 20.00</span></p>
+                        <button type="button" class="btn btn-primary w-100"><i class="fa-solid fa-cart-shopping me-2"></i>Comprar ahora</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 3 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card product-card h-100 shadow-sm border-0">
+                    <img src="img/personaloiisado.jpg" class="card-img-top imagenes_ta" alt="Case personalizado">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <p class="fw-bold text-dark">Case personalizado <br><span class="text-primary">S/ 44.00</span></p>
+                        <button type="button" class="btn btn-primary w-100"><i class="fa-solid fa-cart-shopping me-2"></i>Comprar ahora</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 4 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card product-card h-100 shadow-sm border-0">
+                    <img src="img/cargador.jpg" class="card-img-top imagenes_ta" alt="Cargador">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <p class="fw-bold text-dark">Cargador <br><span class="text-primary">S/ 20.00</span></p>
+                        <button type="button" class="btn btn-primary w-100"><i class="fa-solid fa-cart-shopping me-2"></i>Comprar ahora</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 5 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card product-card h-100 shadow-sm border-0">
+                    <img src="img/audfonos.jpg" class="card-img-top imagenes_ta" alt="Audífonos">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <p class="fw-bold text-dark">Audífonos <br><span class="text-primary">S/ 30.00</span></p>
+                        <button type="button" class="btn btn-primary w-100"><i class="fa-solid fa-cart-shopping me-2"></i>Comprar ahora</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 6 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card product-card h-100 shadow-sm border-0">
+                    <img src="img/meemoria.jpg" class="card-img-top imagenes_ta" alt="Memoria">
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <p class="fw-bold text-dark">Memoria <br><span class="text-primary">S/ 50.00</span></p>
+                        <button type="button" class="btn btn-primary w-100"><i class="fa-solid fa-cart-shopping me-2"></i>Comprar ahora</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- SERVICIOS -->
+    <section id="nuestro_servicios" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 id="nue" class="fw-bold">NUESTROS SERVICIOS</h2>
+                <p class="text-muted">Solución rápida y segura para tu celular</p>
+            </div>
+            
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7">
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="lo_servi card p-4 h-150 border-0 shadow-sm text-center">
+                                <div class="ico mb-3"><i class="ri-smartphone-fill fs-1 text-primary"></i></div>
+                                <div class="tex_ico">
+                                    <a href="#" class="boton_ser fw-bold fs-5">Cambio de pantalla</a>
+                                    <p class="text-muted small mt-1">Pantallas originales y de alta calidad</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="lo_servi card p-4 h-150 border-0 shadow-sm text-center">
+                                <div class="ico mb-3"><i class="ri-battery-2-charge-fill fs-1 text-primary"></i></div>
+                                <div class="tex_ico">
+                                    <a href="#" class="boton_ser fw-bold fs-5">Cambio de batería</a>
+                                    <p class="text-muted small mt-1">Más duración para tu equipo</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="lo_servi card p-4 h-150 border-0 shadow-sm text-center">
+                                <div class="ico mb-3"><i class="fa-solid fa-memory fs-1 text-primary"></i></div>
+                                <div class="tex_ico">
+                                    <a href="#" class="boton_ser fw-bold fs-5">Solución de fallas</a>
+                                    <p class="text-muted small mt-1">Solución de fallas técnicas y microelectrónica</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="lo_servi card p-4 h-150 border-0 shadow-sm text-center">
+                                <div class="ico mb-3"><i class="ri-rotate-lock-fill fs-1 text-primary"></i></div>
+                                <div class="tex_ico">
+                                    <a href="#" class="boton_ser fw-bold fs-5">Liberación de equipos</a>
+                                    <p class="text-muted small mt-1">Desbloqueo de todas las operadoras</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="cuados_1">
-                    <div class="imagen_cua">
-                        <img src="img/vidriof.jpg" class="imagenes_ta">
-                    </div>
-                    <div class="tex_cua">
-                        <p>vidrio tenplado <br>s/20.00</p>
-                        <button type="button" class="btn btn-primary"><i class="fa-solid fa-cart-shopping fa-1x"></i>conprar ahora</button>
-                    </div>
-                </div>
-                <div class="cuados_1">
-                    <div class="imagen_cua">
-                        <img src="img/personaloiisado.jpg"  class="imagenes_ta">
-                    </div>
-                    <div class="tex_cua">
-                        <p>case personalisado <br>s/44.00</p>
-                        <button type="button" class="btn btn-primary" ><i class="fa-solid fa-cart-shopping fa-1x"></i>conprar ahora</button>
-                    </div>
+                <div class="col-lg-5 text-center">
+                    <img src="img/hero.jpg" id="imagen_manos" class="img-fluid rounded shadow" alt="Reparación en proceso">
                 </div>
             </div>
-            
-            <div id="segundos-3">
-                <div class="cuadros_2">
-                    <div class="imagen_cua">
-                        <img src="img/cargador.jpg" class="imagenes_ta" alt="">
-                    </div>
-                    <div class="tex_cua">
-                        <p>cargador <br>s/20</p>
-                        <button type="button" class="btn btn-primary"><i class="fa-solid fa-cart-shopping fa-1x"></i>conprar ahora</button>
-                    </div>
-                </div>
-                <div class="cuadros_2">
-                    <div class="imagen_cua">
-                        <img src="img/audfonos.jpg" class="imagenes_ta" alt="">
-                    </div>
-                    <div class="tex_cua">
-                        <p>audifonos <br>s/30</p>
-                        <button type="button" class="btn btn-primary"><i class="fa-solid fa-cart-shopping fa-1x"></i>conprar ahora</button>
+        </div>
+    </section>
+
+    <!-- CALIDAD / GARANTÍAS -->
+    <section id="calidad" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2><span class="cal">La promesa de</span> <span class="fix_neo">calidad Fix Neo</span></h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="promesas card p-4 text-center h-100 shadow-sm border-0">
+                        <i class="fa-solid fa-shield-halved fa-3x text-primary mb-3" id="escudo"></i>
+                        <h5 class="sub_titulos fw-bold">Garantía Escrita Real</h5>
+                        <p class="text-muted small">Te entregamos certificado de garantía de 90 a 180 días con reemplazo inmediato ante cualquier anomalía.</p>
                     </div>
                 </div>
-                <div class="cuadros_2">
-                    <div class="imagen_cua">
-                        <img src="img/meemoria.jpg" class="imagenes_ta" alt="">
+                <div class="col-md-4">
+                    <div class="promesas card p-4 text-center h-100 shadow-sm border-0">
+                        <i class="fa-solid fa-eye fa-3x text-primary mb-3" id="ojo"></i>
+                        <h5 class="sub_titulos fw-bold">Reparación a la Vista</h5>
+                        <p class="text-muted small">Puedes presenciar el proceso de apertura y mantenimiento de tu smartphone a través de nuestra barra transparente.</p>
                     </div>
-                    <div class="tex_cua">
-                    <p>memoria <br>s/50</p>
-                        <button type="button" class="btn btn-primary"><i class="fa-solid fa-cart-shopping fa-1x"></i>conprar ahora</button>
+                </div>
+                <div class="col-md-4">
+                    <div class="promesas card p-4 text-center h-100 shadow-sm border-0">
+                        <i class="fa-solid fa-truck-ramp-box fa-3x text-primary mb-3" id="carro"></i>
+                        <h5 class="sub_titulos fw-bold">Servicio a Domicilio Express</h5>
+                        <p class="text-muted small">¿No puedes salir de casa u oficina? Nuestro motorizado de confianza recoge tu equipo y te lo devuelve como nuevo.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <section id="nuestro_servicios">
-            <div id="papa_sevicios">
-                <div id="textos_sevicios">
-                   <div id="servi_nuestro">
-                       <h2 id="nue">NUESTROS SERVICIOS</h2>
-                       <P>Solucion rapida sergura  para tu cellular</P>
-                    </div> 
-                    <div id="logitos">
-                        <div class="lo_servi">
-                           <div class="ico">
-                                <i class="ri-smartphone-fill fa-3x" id="icoo_1"></i>
-                                
-                            </div> 
-                            <div class="tex_ico">
-                               <a href="#" class="boton_ser">canbio de pantalla</a>
-            
-                                <p>pantallas originales y de alta calidad</p>
+    </section>
+
+    <!-- LABORATORIO / SOPORTE -->
+    <section id="laboratorio" class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-5">
+                    <div id="tex_labo" class="bg-white p-4 rounded shadow-sm border">
+                        <h2 class="mb-4"><span class="tex1-laboo">Laboratorio Central</span> <span class="text-laboo">Fix Neo</span></h2>
+                        
+                        <div class="casitas mb-3">
+                            <div class="iconos_cantral me-3"><i class="fa-solid fa-store fa-2x"></i></div>
+                            <div class="tex_central">
+                                <h5 class="sub_labo fw-bold">Dirección de Tienda</h5>
+                                <p class="text-muted small mb-0">Av. Cajamarca, galería Grau, Local 42</p>
                             </div>
                         </div>
-                        <div class="lo_servi">
-                            <div class="ico">
-                                <i class="ri-battery-2-charge-fill fa-3x" id="icoo_2"></i>
+                        <div class="casitas mb-3">
+                            <div class="iconos_cantral me-3"><i class="fa-solid fa-clock fa-2x"></i></div>
+                            <div class="tex_central">
+                                <h5 class="sub_labo fw-bold">Horario de Atención</h5>
+                                <p class="text-muted small mb-0">Lunes a Sábado: 09:00 AM - 09:00 PM<br>Domingos: 10:00 AM - 02:00 PM</p>
                             </div>
-                            <div class="tex_ico">
-                                <a href="#" class="boton_ser">canbio de bateria</a>
-                       
-                                <p>mas duracion para tu equipo</p>
-                            </div>
-                            
                         </div>
-                        <div class="lo_servi">
-                            <div class="ico">
-                                <i class="fa-solid fa-memory fa-3x" id="icoo_3"></i>
+                        <div class="casitas mb-4">
+                            <div class="iconos_cantral me-3"><i class="fa-solid fa-phone fa-2x"></i></div>
+                            <div class="tex_central">
+                                <h5 class="sub_labo fw-bold">Teléfono Directo & WhatsApp</h5>
+                                <p class="text-muted small mb-0">+51 925 242 629 / +51 970 530 362</p>
                             </div>
-                            <div class="tex_ico">
-                                <a href="#" class="boton_ser">solucionde fallas</a>
-                           
-                                <p>solucionde fallas tecnicas</p>
-                            </div> 
                         </div>
-                        <div class="lo_servi">
-                             <div class="ico">
-                                <i class="ri-rotate-lock-fill fa-3x" id="icoo_4"></i>
-                            </div>
-                            <div class="tex_ico">
-                                <a href="#" class="boton_ser">liveracion de equipos</a>
-       
-                                <p>desbloqueo de todas las operadoras</p>
-                            </div>
+
+                        <div class="d-flex flex-column flex-sm-row gap-2 w-100">
+                            <a href="https://wa.me/51925242629" target="_blank" rel="noopener" class="btn btn-success flex-grow-1 text-white">
+                                <i class="fa-brands fa-whatsapp me-2"></i> WhatsApp
+                            </a>
+                            <a href="tel:+51925242629" class="btn btn-primary flex-grow-1">
+                                <i class="fa-solid fa-phone me-2"></i> Llamar
+                            </a>
                         </div>
                     </div>
                 </div>
                 
-                <div id="inagen_servicio">
-                    <img src="img/hero.jpg" id="imagen_manos">
-                </div>
-            </div>
-        </section>
-        <section id="calidad">
-            <div id="tex_calidad">
-                <h2> <span class="cal">la promesa de</span> <span class="fix_neo">calidad Fix Neo</span></h2>
-                <div id="papa_calidad">
-               
-                    <div class="promesas">
-                        <i class="fa-solid fa-shield-halved fa-3x" id="escudo"></i>
-                        <br>
-                        <h6 class="sub_titulos">Garantía Escrita Real</h6>
-                        <p>Te entregamos certificado de garantía de 
-                            90 a 180 días con reemplazo inmediato de repuesto ante cualquier anomalía.</p>
-                    </div>
-                    <div class="promesas">
-                        <i class="fa-solid fa-eye fa-3x" id="ojo"></i>
-                        <br>
-                        <h6 class="sub_titulos">Reparación a la Vista</h6>
-                        <p>Puedes presenciar el proceso de apertura y mantenimiento 
-                        de tu smartphone a través de nuestra barra transparente.</p>
-                    </div>
-                    <div class="promesas">
-                        <i class="fa-solid fa-truck-ramp-box fa-3x" id="carro"></i>
-                        <br>
-                        <h6 class="sub_titulos">Servicio a Domicilio Express</h6>
-                        <p>¿No puedes salir de casa u oficina? Nuestro motorizado de confianza recoge tu equipo y te lo devuelve como nuevo.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="laboratorio">
-            <div id="papa_labo">
-                <div id="tex_labo">
-                    <h2> <span class="tex1-laboo">Laboratorio Central</span> <span class="text-laboo">Fix Neo</span></h2>
-                   <div class="casitas">
-                       <div class="iconos_cantral">
-                           <i class="fa-solid fa-store fa-3x"></i>
-                       </div>
-                       <div class="tex_central">
-                           <h4 class="sub_labo">Dirección de Tienda</h4>
-                           <p>Av.cajamarca, galeria grau, Local 42</p>
-                       </div>
-                    </div>
-                    <div class="casitas">
-                        <div class="iconos_cantral">
-                           <i class="fa-solid fa-clock fa-3x"></i> 
-                        </div>
-                        <div class="tex_central">
-                            <h4 class="sub_labo">Horario de Atención</h4>
-                            <p>Lunes a Sábado: 09:00 AM - 09:00 PM<br>Domingos: 10:00 AM - 02:00 PM</p>
-                        </div>
-                    </div>
-                    <div class="casitas">
-                        <div class="iconos_cantral">
-                            <i class="fa-solid fa-phone fa-3x"></i>
-                        </div>
-                        <div class="tex_central">
-                            <h4 class="sub_labo">Teléfono Directo & WhatsApp</h4>
-                            +51 925242629/ +51 970530362
-                        </div>
-                    </div>
-                    <div style="display: flex; gap: 2rem; margin-top: 2rem;">
-                        <a href="https://wa.me/18003496360" target="_blank" rel="noopener" class="btn btn-primary" style="background: #25d366; color: #fff;">
-                            <i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i> WhatsApp Directo
-                        </a>
-                        <a href="tel:18003496360" class="btn btn-secondary">
-                            <i class="fa-solid fa-phone"></i> Llamar Ahora
-                        </a>
-                    </div>
-                </div>
-                <div id="mapa">
-                    <div class="mapa-google">
+                <div class="col-lg-7">
+                    <div id="mapa" class="rounded overflow-hidden shadow-sm border">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100580.49766190963!2d-74.95397304374902!3d-12.04637401829684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c9f29c68c1b7%3A0x603204163d457c70!2sPer%C3%BA!5e0!3m2!1ses!2spe!4v1696900000000!5m2!1ses!2spe"
                                 width="100%" 
-                                height="550" 
+                                height="450" 
                                 style="border:0;" 
                                 allowfullscreen="" 
                                 loading="lazy">
@@ -272,29 +293,34 @@
                     </div>
                 </div>
             </div>
-        </section>
-        
-        <footer>
-        <div class="footer-brand">
-             <a href="#" class="logo_footer">
-                <div class="logo-icon fa-3x" id="chip">
-                     <i class="fa-solid fa-microchip" id="micro">
-                </i></div>
-                 <div class="footer-text">
-                     <span id="fix_fu">FIX</span><span id="neo_fu">NEO</span>
-                 </div>
-             </a>
-             <p id="tex-footer">Laboratorio especializado en reparación express de smartphones, <br>micro-soldadura electrónica y mantenimiento preventivo con los más altos estándares de calidad.</p>
-             <div class="footer-social">
-                 <a href="https://www.facebook.com/?locale=es_LA" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                 <a href="https://www.instagram.com/" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                 <a href="https://www.tiktok.com/es/" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                 <a href="https://www.youtube.com/" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-             </div>
         </div>
-        </footer>
+    </section>
         
-    <script src="https://kit.fontawesome.com/2041ca8f65.js" crossorigin="anonymous"></script>
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container text-center text-md-start">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-2">
+                        <i class="fa-solid fa-microchip fa-2x text-primary"></i>
+                        <h3 class="m-0"><span class="text-white">FIX</span><span class="text-primary">NEO</span></h3>
+                    </div>
+                    <p class="text-muted small mb-0">Laboratorio especializado en reparación express de smartphones, micro-soldadura electrónica y mantenimiento preventivo.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer-social d-flex justify-content-center justify-content-md-end gap-3 mb-2">
+                        <a href="https://www.facebook.com" class="social-icon text-white fs-5" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com" class="social-icon text-white fs-5" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com" class="social-icon text-white fs-5" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.youtube.com" class="social-icon text-white fs-5" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <p class="text-muted small mb-0">&copy; 2026 FIXNEO. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+        
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>  
-    </body>
+</body>
 </html>
