@@ -2,6 +2,7 @@ const searchForm = document.querySelector("#search-form");
 const searchInput = document.querySelector("#search-input");
 const searchStatus = document.querySelector("#search-status");
 const productCards = [...document.querySelectorAll(".product-card")];
+const productGrid = productCards[0]?.parentElement?.parentElement;
 
 function normalizeText(text) {
     return text
@@ -19,7 +20,11 @@ searchForm.addEventListener("submit", (event) => {
         normalizeText(card.textContent).includes(query)
     );
 
-    productCards.forEach((card) => card.classList.remove("search-result-found"));
+    productCards.forEach((card) => {
+        card.classList.remove("search-result-found");
+        card.parentElement.hidden = card !== matchingProduct;
+    });
+    productGrid?.classList.add("justify-content-center");
 
     if (!matchingProduct) {
         searchStatus.textContent = "No encontramos ese producto.";
@@ -34,4 +39,9 @@ searchForm.addEventListener("submit", (event) => {
 
 searchInput.addEventListener("input", () => {
     searchStatus.textContent = "";
+    productCards.forEach((card) => {
+        card.parentElement.hidden = false;
+        card.classList.remove("search-result-found");
+    });
+    productGrid?.classList.remove("justify-content-center");
 });
