@@ -42,14 +42,78 @@
                     <button class="btn btn-outline-primary btn-sm" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                     <span class="search-status" id="search-status" role="status" aria-live="polite"></span>
                 </form>
-                <button class="btn-icon" aria-label="Usuario"><i class="fa-solid fa-user fa-lg" id="usu"></i></button>
-                <button class="btn-icon position-relative" aria-label="Carrito">
+                <button class="btn-icon" id="account-open" type="button" aria-label="Abrir mi cuenta" aria-haspopup="dialog" aria-controls="account-dialog"><i class="fa-solid fa-user fa-lg" id="usu"></i></button>
+                <button class="btn-icon position-relative" id="cart-open" type="button" aria-label="Ver carrito" aria-haspopup="dialog" aria-controls="cart-dialog">
                     <i class="fa-solid fa-cart-shopping fa-lg" id="car"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary" style="font-size: 0.6rem;">0</span>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary" id="cart-count" aria-hidden="true" style="font-size: 0.6rem;">0</span>
                 </button>
             </div>
         </div>
     </header>
+
+    <dialog class="account-dialog" id="account-dialog" aria-labelledby="account-title">
+        <div class="account-dialog-header">
+            <div class="account-heading-icon" aria-hidden="true"><i class="fa-solid fa-user"></i></div>
+            <div>
+                <h2 id="account-title">Tu cuenta FIXNEO</h2>
+                <p>Ingresa o crea una cuenta para continuar.</p>
+            </div>
+            <button class="account-close" id="account-close" type="button" aria-label="Cerrar ventana">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="account-tabs" role="tablist" aria-label="Opciones de cuenta">
+            <button class="account-tab is-active" id="login-tab" type="button" role="tab" aria-selected="true" aria-controls="login-panel">Iniciar sesión</button>
+            <button class="account-tab" id="register-tab" type="button" role="tab" aria-selected="false" aria-controls="register-panel">Crear cuenta</button>
+        </div>
+
+        <section class="account-panel" id="login-panel" role="tabpanel" aria-labelledby="login-tab">
+            <form class="account-form" data-account-form>
+                <label for="login-email">Correo electrónico</label>
+                <input id="login-email" name="email" type="email" placeholder="nombre@correo.com" autocomplete="email" required>
+                <label for="login-password">Contraseña</label>
+                <input id="login-password" name="password" type="password" placeholder="Tu contraseña" autocomplete="current-password" required>
+                <button class="account-submit" type="submit">Iniciar sesión</button>
+            </form>
+        </section>
+
+        <section class="account-panel" id="register-panel" role="tabpanel" aria-labelledby="register-tab" hidden>
+            <form class="account-form" data-account-form>
+                <label for="register-name">Nombre</label>
+                <input id="register-name" name="name" type="text" placeholder="Tu nombre" autocomplete="name" required>
+                <label for="register-email">Correo electrónico</label>
+                <input id="register-email" name="email" type="email" placeholder="nombre@correo.com" autocomplete="email" required>
+                <label for="register-password">Contraseña</label>
+                <input id="register-password" name="password" type="password" placeholder="Crea una contraseña" autocomplete="new-password" minlength="8" required>
+                <button class="account-submit" type="submit">Crear cuenta</button>
+            </form>
+        </section>
+
+        <p class="account-status" id="account-status" role="status" aria-live="polite"></p>
+    </dialog>
+
+        <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-title">
+            <div class="cart-dialog-header">
+                <div>
+                    <h2 id="cart-title">Tu carrito</h2>
+                    <p>Productos que seleccionaste</p>
+                </div>
+                <button class="cart-close" id="cart-close" type="button" aria-label="Cerrar carrito">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="cart-items" id="cart-items" aria-live="polite"></div>
+            <p class="cart-empty" id="cart-empty">Aún no has seleccionado productos.</p>
+            <div class="cart-summary">
+                <span>Total</span>
+                <strong id="cart-total">S/ 0.00</strong>
+            </div>
+            <a class="cart-checkout" id="cart-checkout" href="https://wa.me/51924221113" target="_blank" rel="noopener" aria-disabled="true">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Continuar por WhatsApp
+            </a>
+            <span class="visually-hidden" id="cart-status" role="status" aria-live="polite"></span>
+        </dialog>
 
     <!-- HERO CAROUSEL -->
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -95,7 +159,10 @@
                     <img src="img/trnsparente.jpg" class="card-img-top imagenes_ta" alt="Funda transparente">
                     <div class="card-body text-center d-flex flex-column justify-content-between">
                         <p class="fw-bold text-dark">Funda transparente <br><span class="text-primary">S/ 34.99</span></p>
-                        <a href="https://wa.me/51924221113?text=Hola%2C%20quiero%20comprar%20Funda%20transparente%20%28S%2F%2034.99%29." target="_blank" rel="noopener" class="btn btn-primary w-100"><i class="fa-solid fa-cart-shopping me-2"></i>Comprar ahora</a>
+                        <div class="product-actions d-grid gap-2">
+                            <a class="btn btn-success w-100" href="https://wa.me/51924221113?text=Hola%2C%20quiero%20comprar%20Funda%20transparente%20%28S%2F%2034.99%29." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp me-2"></i>Comprar ahora</a>
+                            <button type="button" class="btn btn-primary w-100" data-add-to-cart><i class="fa-solid fa-cart-plus me-2"></i>Añadir al carrito</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -105,7 +172,10 @@
                     <img src="img/vidriof.jpg" class="card-img-top imagenes_ta" alt="Vidrio templado">
                     <div class="card-body text-center d-flex flex-column justify-content-between">
                         <p class="fw-bold text-dark">Vidrio templado <br><span class="text-primary">S/ 20.00</span></p>
-                        <a href="https://wa.me/51924221113?text=Hola%2C%20quiero%20comprar%20Vidrio%20templado%20%28S%2F%2020.00%29." target="_blank" rel="noopener" class="btn btn-primary w-100"><i class="fa-solid fa-cart-shopping me-2"></i>Comprar ahora</a>
+                        <div class="product-actions d-grid gap-2">
+                            <a class="btn btn-success w-100" href="https://wa.me/51924221113?text=Hola%2C%20quiero%20comprar%20Vidrio%20templado%20%28S%2F%2020.00%29." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp me-2"></i>Comprar ahora</a>
+                            <button type="button" class="btn btn-primary w-100" data-add-to-cart><i class="fa-solid fa-cart-plus me-2"></i>Añadir al carrito</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -115,7 +185,10 @@
                     <img src="img/personaloiisado.jpg" class="card-img-top imagenes_ta" alt="Case personalizado">
                     <div class="card-body text-center d-flex flex-column justify-content-between">
                         <p class="fw-bold text-dark">Case personalizado <br><span class="text-primary">S/ 44.00</span></p>
-                        <a href="https://wa.me/51924221113?text=Hola%2C%20quiero%20comprar%20Case%20personalizado%20%28S%2F%2044.00%29." target="_blank" rel="noopener" class="btn btn-primary w-100"><i class="fa-solid fa-cart-shopping me-2"></i>Comprar ahora</a>
+                        <div class="product-actions d-grid gap-2">
+                            <a class="btn btn-success w-100" href="https://wa.me/51924221113?text=Hola%2C%20quiero%20comprar%20Case%20personalizado%20%28S%2F%2044.00%29." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp me-2"></i>Comprar ahora</a>
+                            <button type="button" class="btn btn-primary w-100" data-add-to-cart><i class="fa-solid fa-cart-plus me-2"></i>Añadir al carrito</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -125,7 +198,10 @@
                     <img src="img/cargador.jpg" class="card-img-top imagenes_ta" alt="Cargador">
                     <div class="card-body text-center d-flex flex-column justify-content-between">
                         <p class="fw-bold text-dark">Cargador <br><span class="text-primary">S/ 20.00</span></p>
-                        <a href="https://wa.me/51924221113?text=Hola%2C%20quiero%20comprar%20Cargador%20%28S%2F%2020.00%29." target="_blank" rel="noopener" class="btn btn-primary w-100"><i class="fa-solid fa-cart-shopping me-2"></i>Comprar ahora</a>
+                        <div class="product-actions d-grid gap-2">
+                            <a class="btn btn-success w-100" href="https://wa.me/51924221113?text=Hola%2C%20quiero%20comprar%20Cargador%20%28S%2F%2020.00%29." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp me-2"></i>Comprar ahora</a>
+                            <button type="button" class="btn btn-primary w-100" data-add-to-cart><i class="fa-solid fa-cart-plus me-2"></i>Añadir al carrito</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -135,7 +211,10 @@
                     <img src="img/audfonos.jpg" class="card-img-top imagenes_ta" alt="Audífonos">
                     <div class="card-body text-center d-flex flex-column justify-content-between">
                         <p class="fw-bold text-dark">Audífonos <br><span class="text-primary">S/ 30.00</span></p>
-                        <a href="https://wa.me/51924221113?text=Hola%2C%20quiero%20comprar%20Aud%C3%ADfonos%20%28S%2F%2030.00%29." target="_blank" rel="noopener" class="btn btn-primary w-100"><i class="fa-solid fa-cart-shopping me-2"></i>Comprar ahora</a>
+                        <div class="product-actions d-grid gap-2">
+                            <a class="btn btn-success w-100" href="https://wa.me/51924221113?text=Hola%2C%20quiero%20comprar%20Aud%C3%ADfonos%20%28S%2F%2030.00%29." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp me-2"></i>Comprar ahora</a>
+                            <button type="button" class="btn btn-primary w-100" data-add-to-cart><i class="fa-solid fa-cart-plus me-2"></i>Añadir al carrito</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -145,7 +224,10 @@
                     <img src="img/meemoria.jpg" class="card-img-top imagenes_ta" alt="Memoria">
                     <div class="card-body text-center d-flex flex-column justify-content-between">
                         <p class="fw-bold text-dark">Memoria <br><span class="text-primary">S/ 50.00</span></p>
-                        <a href="https://wa.me/51924221113?text=Hola%2C%20quiero%20comprar%20Memoria%20%28S%2F%2050.00%29." target="_blank" rel="noopener" class="btn btn-primary w-100"><i class="fa-solid fa-cart-shopping me-2"></i>Comprar ahora</a>
+                        <div class="product-actions d-grid gap-2">
+                            <a class="btn btn-success w-100" href="https://wa.me/51924221113?text=Hola%2C%20quiero%20comprar%20Memoria%20%28S%2F%2050.00%29." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp me-2"></i>Comprar ahora</a>
+                            <button type="button" class="btn btn-primary w-100" data-add-to-cart><i class="fa-solid fa-cart-plus me-2"></i>Añadir al carrito</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -215,7 +297,7 @@
             <div class="text-center mb-5">
                 <h2><span class="cal">La promesa de</span> <span class="fix_neo">calidad Fix Neo</span></h2>
             </div>
-            <div class="row g-4">
+            <div class="row g-4 justify-content-center">
                 <div class="col-md-4">
                     <div class="promesas card p-4 text-center h-100 shadow-sm border-0">
                         <i class="fa-solid fa-eye fa-3x text-primary mb-3" id="ojo"></i>
@@ -228,7 +310,7 @@
                         <i class="fa-solid fa-truck-ramp-box fa-3x text-primary mb-3" id="carro"></i>
                         <h5 class="sub_titulos fw-bold">Servicio a Domicilio Express</h5>
                         <p class="text-muted small">¿No puedes salir de casa u oficina? Nuestro motorizado de confianza recoge tu equipo y te lo devuelve como nuevo.</p>
-                    </div>
+                    </div>    
                 </div>
             </div>
         </div>
@@ -336,9 +418,55 @@
             </div>
         </div>
     </footer>
+
+    <!-- CHAT DE SOPORTE -->
+    <section class="chat-widget" aria-label="Asistente virtual FIXNEO">
+        <div class="chat-window" id="chat-window" aria-labelledby="chat-title" hidden>
+            <header class="chat-header">
+                <div class="chat-avatar" aria-hidden="true"><i class="fa-solid fa-headset"></i></div>
+                <div class="chat-heading">
+                    <h2 id="chat-title">Asistente FIXNEO</h2>
+                    <p><span class="chat-online-dot"></span>En línea para ayudarte</p>
+                </div>
+                <button class="chat-close" id="chat-close" type="button" aria-label="Cerrar chat">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+            </header>
+
+            <div class="chat-messages" id="chat-messages" role="log" aria-live="polite" aria-relevant="additions text">
+                <div class="chat-message chat-message-bot">
+                    <p>¡Hola! Soy el asistente de FIXNEO. ¿Qué necesitas saber sobre productos, reparaciones o nuestra tienda?</p>
+                </div>
+            </div>
+
+            <div class="chat-quick-questions" aria-label="Preguntas frecuentes">
+                <button type="button" data-chat-prompt="¿Qué productos venden?">Productos</button>
+                <button type="button" data-chat-prompt="¿Qué servicios ofrecen?">Reparaciones</button>
+                <button type="button" data-chat-prompt="¿Dónde están ubicados?">Ubicación</button>
+            </div>
+
+            <a class="chat-whatsapp" href="https://wa.me/51924221113?text=Hola%2C%20necesito%20ayuda%20con%20una%20consulta%20de%20FIXNEO." target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Hablar con una persona
+            </a>
+
+            <form class="chat-form" id="chat-form">
+                <label class="visually-hidden" for="chat-input">Escribe tu pregunta</label>
+                <input id="chat-input" name="message" type="text" maxlength="300" placeholder="Escribe tu pregunta..." autocomplete="off" required>
+                <button type="submit" aria-label="Enviar mensaje"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+            </form>
+        </div>
+
+        <button class="chat-toggle" id="chat-toggle" type="button" aria-label="Abrir chat de FIXNEO" aria-controls="chat-window" aria-expanded="false">
+            <i class="fa-regular fa-message chat-toggle-open" aria-hidden="true"></i>
+            <i class="fa-solid fa-xmark chat-toggle-close" aria-hidden="true"></i>
+        </button>
+    </section>
         
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>  
     <script src="js/search.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/account.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 </html>
